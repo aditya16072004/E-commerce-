@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<style>
+body{
+font-family: Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#f1f3f6;
+}
+.auth-container{
+background:white;
+padding:30px;
+width:300px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+button{
+padding:10px;
+width:100%;
+background:#2874f0;
+color:white;
+border:none;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+<div class="logo">
+<a href="index.html">ShopKart</a>
+</div>
+<div class="auth-container">
+<h2>Login</h2>
+<input type="email" id="loginEmail" placeholder="Email">
+<input type="password" id="loginPassword" placeholder="Password">
+<label>
+<input type="checkbox" id="rememberMe"> Remember Me
+</label>
+<button type="button" onclick="login()">Login</button>
+</div>
+<script>
+function login(){
+let email = document.getElementById("loginEmail").value;
+let password = document.getElementById("loginPassword").value;
+let remember = document.getElementById("rememberMe").checked;
+let storedUser = JSON.parse(localStorage.getItem("user"));
+let admin = {
+email: "admin@gmail.com",
+password: "admin123",
+role: "admin",
+name: "Admin"
+};
+let currentUser = null;
+if(email === admin.email && password === admin.password){
+currentUser = admin;
+}
+else if(storedUser && email === storedUser.email && password === storedUser.password){
+currentUser = storedUser;
+}
+else{
+alert("Invalid Email or Password");
+return;
+}
+if(remember){
+localStorage.setItem("loggedInUser", JSON.stringify(currentUser));
+} else {
+sessionStorage.setItem("loggedInUser", JSON.stringify(currentUser));
+}
+alert("Login Successful!");
+if(currentUser.role === "admin"){
+window.location.href = "admin.html";
+} else {
+window.location.href = "index.html";
+}
+}
+</script>
+</body>
+</html>

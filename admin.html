@@ -1,0 +1,47 @@
+<body>
+<header class="admin-header">
+<h2>Admin Dashboard</h2>
+</header>
+<div class="dashboard">
+<div class="admin-card">
+<h3>Add Product</h3>
+<input type="text" id="pname" placeholder="Product Name">
+<input type="number" id="pprice" placeholder="Price">
+<input type="text" id="pimage" placeholder="Image URL">
+<button onclick="addProduct()">Add Product</button>
+</div>
+<div class="admin-card">
+<h3>Product List</h3>
+<div id="productList"></div>
+</div>
+</div>
+<div class="logo">
+<a href="index.html">ShopKart</a>
+</div>
+<script src="script.js"></script>
+<script>loadProducts();</script>
+<h2>Admin Dashboard</h2>
+<div id="adminProducts"></div>
+<script>
+let products = JSON.parse(localStorage.getItem("products")) || [];
+let container = document.getElementById("adminProducts");
+function displayProducts() {
+container.innerHTML = "";
+products.forEach((product, index) => {
+container.innerHTML += `
+<div style="margin:10px; padding:10px; border:1px solid gray;">
+<h3>${product.name}</h3>
+<p>₹${product.price}</p>
+<button onclick="removeProduct(${index})">Remove</button>
+</div>
+`;
+});
+}
+function removeProduct(index) {
+products.splice(index, 1);  // remove only clicked product
+localStorage.setItem("products", JSON.stringify(products));
+displayProducts();
+}
+displayProducts();
+</script>
+</body>

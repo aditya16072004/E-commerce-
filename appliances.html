@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ShopKart - E-Commerce Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="logo">
+<a href="index.html">ShopKart</a>
+</div>
+<div class="search-box">
+<input type="text" placeholder="Search for products...">
+<button>Search</button>
+</div>
+<div class="menu">
+<a href="login.html">Login</a>
+<a href="Signup.html">Signup</a>
+<a href="cart.html">Cart</a>
+<a href="admin.html">Admin</a>
+<a href="payment.html">Payment</a>
+</div>
+</div>
+</header>
+<!-- Navigation -->
+<nav>
+<a href="appliances.html">Appliances</a>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da" alt="Shopping Banner">
+</section>
+<!-- Products Section -->
+<section class="products">
+<div class="product-card">
+<img src="D:\images\airfryer.webp">
+<h3>Air Fryer</h3>
+<p>₹11,742</p>
+<button onclick="addToCart('Air Fryer',11742)">
+Add to Cart
+</button>
+<button onclick="showProduct('Air Fryer',11742,'Special Feature: 7 One-Touch Cooking Programs\nDimensions: 23.5D x 28.8W x 41.2H cm\nColour: Black\nCapacity: 5 Litres\nMaterial: BPA Free, Ceramic Coating')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\MP000000029597340_1348Wx2000H_202512231759481.webp" alt="Burner Glass Top Gas Stove">
+<h3>Burner Glass Top Gas Stove</h3>
+<p>₹2,049</p>
+<button onclick="addToCart('Burner Glass Top Gas Stove',11742)">
+Add to Cart
+</button>
+<button onclick="showProduct('Burner Glass Top Gas Stove',2049,'Colour: Black\nMaterial: Stainless Steel\nSpecial Feature: Spill Proof Stainless Steel Tray\nBrand: Pigeon\nHeating Elements: 3 Burners')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\shopping.webp" alt="Convection Microwave Oven">
+<h3>Convection Microwave Oven</h3>
+<p>₹14,099</p>
+<button onclick="addToCart('Convection Microwave Oven',14099)">
+Add to Cart
+</button>
+<button onclick="showProduct('Convection Microwave Oven',14099,'Size: Compact\nBrand: LG\nColour: Black\nHeating Method: Convection\nFinish: Painted')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\shopping (1).webp" alt="Mixer Grinder">
+<h3>Mixer Grinder</h3>
+<p>₹5,999</p>
+<button onclick="addToCart('Mixer Grinder',5999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Mixer Grinder',5999,'Brand: Wipro\nColour: Black\nDimensions: 52.5D x 38.5W x 29H cm\nMaterial: ABS\nFeatures: Adjustable Speed Control, Anti-Skid, Auto Shut Off, Dishwasher Safe Jars, Overheat Protection')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\shopping (2).webp" alt="Dry Iron">
+<h3>Dry Iron</h3>
+<p>₹999</p>
+<button onclick="addToCart('Dry Iron',999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Dry Iron',999,'Brand: Bajaj\nSpecial Feature: Temperature Control\nColour: White\nWattage: 1000 Watts\nDimensions: 24.6L x 10.6W cm')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\ceiling fan.webp" alt="Ceiling Fan">
+<h3>Ceiling Fan</h3>
+<p>₹1,400</p>
+<button onclick="addToCart('Ceiling Fan',1400)">
+Add to Cart
+</button>
+<button onclick="showProduct('Ceiling Fan',1400,'Brand: Bajaj\nColour: Brown\nType: Ceiling Fan\nPower Source: Corded Electric\nStyle: Star Rated\nDimensions: 18.6D x 13.7W x 69.6H cm')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\gyser.webp" alt="Gyser">
+<h3>Water Heater</h3>
+<p>₹6,599</p>
+<button onclick="addToCart('Water Heater',6599)">
+Add to Cart
+</button>
+<button onclick="showProduct('Water Heater',6599,'Brand: A. O. Smith\nCapacity: 15 Litres\nPower Source: Corded Electric\nDimensions: 38.3W x 37.6H cm\nFeatures: Overheat Protection, Rustproof, Low Power Consumption')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\exhaust fan.webp" alt="Exhaust Fan">
+<h3>Exhaust Fan</h3>
+<p>₹1,399</p>
+<button onclick="addToCart('Exhaust Fan',1399)">
+Add to Cart
+</button>
+<button onclick="showProduct('Exhaust Fan',1399,'Brand: Colorbot\nColour: Arctic White\nType: Exhaust Fan\nPower Source: Corded Electric\nStyle: Modern\nDimensions: 9D x 23W x 23H cm')">
+View Details
+</button>
+</section>
+<!-- Footer -->
+<footer>
+<p>© 2026 ShopKart. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+let links = document.querySelectorAll("nav a");
+let currentPage = window.location.pathname.split("/").pop();
+if(currentPage === ""){
+currentPage = "appliances.html";
+}
+links.forEach(link => {
+let linkPage = link.getAttribute("href");
+if(linkPage === currentPage){
+link.classList.add("active");
+}
+});
+</script>
+<div id="productModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+<div style="background:white; padding:20px; margin:100px auto; width:300px; border-radius:10px;">
+<span onclick="closeModal()" style="float:right; cursor:pointer;">X</span>
+<h2 id="pName"></h2>
+<p id="pPrice"></p>
+<p id="pDesc"></p>
+</div>
+</div>
+<script>
+function showProduct(name, price, desc) {
+document.getElementById("pName").innerText = name;
+document.getElementById("pPrice").innerText = "Price: ₹" + price;
+document.getElementById("pDesc").innerText = desc;
+document.getElementById("productModal").style.display = "block";
+}
+function closeModal() {
+document.getElementById("productModal").style.display = "none";
+}
+</script>
+</div>
+</body>
+</html>

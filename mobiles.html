@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ShopKart - E-Commerce Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="logo">
+<a href="index.html">ShopKart</a>
+</div>
+<div class="search-box">
+<input type="text" placeholder="Search for products...">
+<button>Search</button>
+</div>
+<div class="menu">
+<a href="login.html">Login</a>
+<a href="Signup.html">Signup</a>
+<a href="cart.html">Cart</a>
+<a href="admin.html">Admin</a>
+<a href="payment.html">Payment</a>
+</div>
+</div>
+</header>
+<!-- Navigation -->
+<nav>
+<a href="mobiles.html">Mobiles</a>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da" alt="Shopping Banner">
+</section>
+<!-- Products Section -->
+<section class="products">
+<div class="product-card">
+<img src="D:\images\mobiles1.jpg" alt="iPhone 16">
+<h3>iPhone 16</h3>
+<p>₹80,000</p>
+<button onclick="addToCart('iPhone 16',80000)">
+Add to Cart
+</button>
+<button onclick="showProduct('iPhone 16',80000,'Brand: Apple\nOperating System: iOS\nRAM: 256 GB\nStorage: 256 GB\nScreen Size: 6.7 Inches')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\mobiles2.webp" alt="Redmi Note 15 5G">
+<h3>Redmi Note 15 5G</h3>
+<p>₹24,999</p>
+<button onclick="addToCart('Redmi Note 15 5G',24999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Redmi Note 15 5G',24999,'Brand: Redmi\nOperating System: Android 15, HyperOS\nRAM: 8 GB\nStorage: 128 GB\nModel: REDMI Note 15 5G')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\mobiles3.webp" alt="iPhone 17">
+<h3>iPhone 17</h3>
+<p>₹82,900</p>
+<button onclick="addToCart('iPhone 17',82900)">
+Add to Cart
+</button>
+<button onclick="showProduct('iphone 17',82900,'Brand: Apple\nOperating System: iOS\nRAM: 0.1 GB\nCPU Speed: 0.1 GHz\nStorage: 128 GB')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\mobiles4.webp" alt="Motorola Edge 60 Pro">
+<h3>Motorola Edge 60 Pro</h3>
+<p>₹29,999</p>
+<button onclick="addToCart('Motorola Edge 60 Pro',29999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Motorola Edge 60 Pro',29999,'Brand: Motorola\nOperating System: Android\nRAM: 12 GB\nCPU Model: Snapdragon\nCPU Speed: 3.35 GHz')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\mobiles5.webp" alt="Samsung Galaxy S24 5G">
+<h3>Samsung Galaxy S24 5G</h3>
+<p>₹48,650</p>
+<button onclick="addToCart('Samsung Galaxy S24 5G',48650)">
+Add to Cart
+</button>
+<button onclick="showProduct('Samsung Galaxy S24 5G',48650,'Brand: Samsung EVO Plus\nOperating System: Android 15\nRAM: 8 GB\nCPU Model: 6-core ARM Cortex-A78AE v8.2\nCPU Speed: 3.4 GHz')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\one plus CE.jpg" alt="OnePlus Nord CE5">
+<h3>OnePlus Nord CE5</h3>
+<p>₹25,000</p>
+<button onclick="addToCart('OnePlus Nord CE5',25000)">
+Add to Cart
+</button>
+<button onclick="showProduct('OnePlus Nord CE5',25000,'Brand: OnePlus\nOperating System: Android 15, OxygenOS 15\nRAM: 8 GB\nCPU Model: Others\nCPU Speed: 3.35 GHz')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\narzo.jpg" alt="Realme NARZO 90x 5G">
+<h3>Realme NARZO 90x 5G</h3>
+<p>₹16,000</p>
+<button onclick="addToCart('Realme NARZO 90x 5G',16000)">
+Add to Cart
+</button>
+<button onclick="showProduct('Realme NARZO 90x 5G',16000,'Brand: Realme\nOperating System: Android 15\nRAM: 6 GB\nCPU Model: Mediatek Dimensity 900\nCPU Speed: 2.4 GHz')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\poco m7.jpg" alt="Poco M7 5G">
+<h3>Poco M7 5G</h3>
+<p>₹11,800</p>
+<button onclick="addToCart('Poco M7 5G',11800)">
+Add to Cart
+</button>
+<button onclick="showProduct('Poco M7 5G',11800,'Brand: POCO\nOperating System: Android 14\nRAM: 8 GB\nStorage: 256 GB\nScreen Size: 6.67 Inches')">
+View Details
+</button>
+</section>
+<!-- Footer -->
+<footer>
+<p>© 2026 ShopKart. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+<script>
+let links = document.querySelectorAll("nav a");
+let currentPage = window.location.pathname.split("/").pop();
+if(currentPage === ""){
+currentPage = "mobiles.html";
+}
+links.forEach(link => {
+let linkPage = link.getAttribute("href");
+if(linkPage === currentPage){
+link.classList.add("active");
+}
+});
+</script>
+<div id="productModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+<div style="background:white; padding:20px; margin:100px auto; width:300px; border-radius:10px;">
+<span onclick="closeModal()" style="float:right; cursor:pointer;">X</span>
+<h2 id="pName"></h2>
+<p id="pPrice"></p>
+<p id="pDesc"></p>
+</div>
+</div>
+<script>
+function showProduct(name, price, desc) {
+document.getElementById("pName").innerText = name;
+document.getElementById("pPrice").innerText = "Price: ₹" + price;
+document.getElementById("pDesc").innerText = desc;
+document.getElementById("productModal").style.display = "block";
+}
+function closeModal() {
+document.getElementById("productModal").style.display = "none";
+}
+</script>
+</div>
+</body>
+</html>

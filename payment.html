@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment - ShopKart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="logo">
+<a href="index.html">ShopKart</a>
+</div>
+<div class="payment-box">
+<h2>Payment Details</h2>
+<input type="text" placeholder="Card Number">
+<input type="text" placeholder="Card Holder Name">
+<input type="text" placeholder="Expiry Date">
+<input type="text" placeholder="CVV">
+<button onclick="makePayment()">Pay Now</button>
+</div>
+<script>
+function makePayment(){
+alert("Payment Successful! 🎉");
+localStorage.removeItem("cart");
+window.location.href="index.html";
+}
+</script>
+</body>
+</html>

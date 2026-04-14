@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ShopKart - E-Commerce Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="logo">
+<a href="index.html">ShopKart</a>
+</div>
+<div class="search-box">
+<input type="text" placeholder="Search for products...">
+<button>Search</button>
+</div>
+<div class="menu">
+<a href="login.html">Login</a>
+<a href="Signup.html">Signup</a>
+<a href="cart.html">Cart</a>
+<a href="admin.html">Admin</a>
+<a href="payment.html">Payment</a>
+</div>
+</div>
+</header>
+<!-- Navigation -->
+<nav>
+<a href="fashion.html">Fashion</a>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da" alt="Shopping Banner">
+</section>
+<!-- Products Section -->
+<section class="products">
+<div class="product-card">
+<img src="D:\images\cloth1.jpg" alt="Cloth">
+<h3>Night Suit</h3>
+<p>₹999</p>
+<button onclick="addToCartWithSize('Night Suit',999,'size1')">
+Add to Cart
+</button>
+<button onclick="showProduct('Night Suit',999,'Material: Satin\nLength: Ankle Length\nCare: Machine Wash\nClosure: Button\nStyle: Women Night Suit Set | Premium Sleepwear with White Piping\nCountry of Origin: India')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size1">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="product-card">
+<img src="D:\images\cloth2.jpg" alt="Kurti">
+<h3>Kurti</h3>
+<p>₹1,299</p>
+<button onclick="addToCartWithSize('Kurti',1299,'size2')">
+Add to Cart
+</button>
+<button onclick="showProduct('Kurti',1299,'Material: Rayon\nFit: Straight\nStyle: Regular\nTheme: Floral\nClosure: Pull On\nCare: Machine Wash')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size2">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="product-card">
+<img src="D:\images\cloth3.jpg" alt="Blazer">
+<h3>Blazer</h3>
+<p>₹4,499</p>
+<button onclick="addToCartWithSize('Blazer',4499,'size3')">
+Add to Cart
+</button>
+<button onclick="showProduct('Blazer',4499,'Material: 80% Polyester, 20% Viscose\nStyle: Classic\nClosure: Button\nPattern: Solid')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size3">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="product-card">
+<img src="D:\images\cloth4.jpg" alt="T-Shirt">
+<h3>T-Shirt</h3>
+<p>₹799</p>
+<button onclick="addToCartWithSize('T-Shirt',799,'size4')">
+Add to Cart
+</button>
+<button onclick="showProduct('T-Shirt',799,'Material: Cotton Blend\nPattern: Solid\nFit: Regular Fit\nSleeve: Half Sleeve\nStyle: Western\nCountry of Origin: India')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size4">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="product-card">
+<img src="D:\images\cloth5.jpg" alt="Cargo Pant">
+<h3>Cargo Pant</h3>
+<p>₹1,100</p>
+<button onclick="addToCartWithSize('Cargo Pant',1100,'size5')">
+Add to Cart
+</button>
+<button onclick="showProduct('Cargo Pant',1100,'Material: Cotton\nLength: Ankle Length\nStyle: Cargo\nClosure: Drawstring\nOccasion: Casual\nCare: Machine Wash\nCountry of Origin: India')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size5">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="product-card">
+<img src="D:\images\socks.webp" alt="Supersox Men's Formal/Office Calf Socks">
+<h3>Supersox Men's Formal/Office Calf Socks</h3>
+<p>₹495</p>
+<button onclick="addToCartWithSize('Supersox Mens Formal/Office Calf Socks',495,'size6')">
+Add to Cart
+</button>
+<button onclick="showProduct('Supersox Mens Formal/Office Calf Socks',495,'Premium Italian Export Quality Socks\nMost Comfortable Socks in India from Supersox\nMaterial: Soft Combed Cotton\nStyle: Double Cylinder Rib Socks\nSize: Free Size\nPackage: Pack of 5 Pairs\nColors: Navy, Black, Brown')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size6">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="product-card">
+<img src="D:\images\jeans.webp" alt="Ben Martin Men's Relaxed Fit Jeans">
+<h3>Ben Martin Men's Relaxed Fit Jeans</h3>
+<p>₹849</p>
+<button onclick="addToCartWithSize('Ben Martin Mens Relaxed Fit Jeans',849,'size7')">
+Add to Cart
+</button>
+<button onclick="showProduct('Ben Martin Mens Relaxed Fit Jeans',849,'Material: Cotton\nLength: Standard\nStyle: Modern\nClosure: Button\nOccasion: Casual\nCare: Machine Wash\nCountry of Origin: India')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size7">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="product-card">
+<img src="D:\images\mens shirt.webp" alt="Peter England Men's Everday Regular Fit Solid Shirt">
+<h3>Peter England Men's Everday Regular Fit Solid Shirt</h3>
+<p>₹900</p>
+<button onclick="addToCartWithSize('Peter England Mens Everday Regular Fit Solid Shirt',900,'size8')">
+Add to Cart
+</button>
+<button onclick="showProduct('Peter England Mens Everday Regular Fit Solid Shirt',900,'Product Type: Full Sleeves Formal Shirt\nGender: Men\nOccasion: Formal\nFit: Regular Fit\nSleeve: Full Sleeves')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size8">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<p>© 2026 ShopKart. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+<script>
+let links = document.querySelectorAll("nav a");
+let currentPage = window.location.pathname.split("/").pop();
+if(currentPage === ""){
+currentPage = "index.html";
+}
+links.forEach(link => {
+let linkPage = link.getAttribute("href");
+if(linkPage === currentPage){
+link.classList.add("active");
+}
+});
+</script>
+<div id="productModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+<div style="background:white; padding:20px; margin:100px auto; width:300px; border-radius:10px;">
+<span onclick="closeModal()" style="float:right; cursor:pointer;">X</span>
+<h2 id="pName"></h2>
+<p id="pPrice"></p>
+<p id="pDesc"></p>
+</div>
+</div>
+<script>
+function showProduct(name, price, desc) {
+document.getElementById("pName").innerText = name;
+document.getElementById("pPrice").innerText = "Price: ₹" + price;
+document.getElementById("pDesc").innerText = desc;
+document.getElementById("productModal").style.display = "block";
+}
+function closeModal() {
+document.getElementById("productModal").style.display = "none";
+}
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ShopKart - E-Commerce Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="logo">
+<a href="index.html">ShopKart</a>
+</div>
+<div class="search-box">
+<input type="text" placeholder="Search for products...">
+<button>Search</button>
+</div>
+<div class="menu">
+<a href="login.html">Login</a>
+<a href="signup.html">Signup</a>
+<a href="cart.html">Cart</a>
+<a href="admin.html">Admin</a>
+<a href="payment.html">Payment</a>
+</div>
+</div>
+</header>
+<!-- Navigation -->
+<nav>
+<a href="index.html">Home</a>
+<a href="electronics.html">Electronics</a>
+<a href="fashion.html">Fashion</a>
+<a href="mobiles.html">Mobiles</a>
+<a href="appliances.html">Appliances</a>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da" alt="Shopping Banner">
+</section>
+<!-- Products Section -->
+<section class="products">
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<h3>Smart Phone</h3>
+<p>₹14,999</p>
+<button onclick="addToCart('Smart Phone',14999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Smartphone',14999,'Best smartphone with great camera\nBrand: Samsung\nOS: Android 15\nRAM: 4GB\nCPU: MediaTek Helio\nSpeed: 2.2GHz')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Watch">
+<h3>Smart Watch</h3>
+<p>₹2,999</p>
+<button onclick="addToCart('Smart Watch',2999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Smart Watch',2999,'Best smartwatch\nOperating System: Android, iOS\nSpecial Feature: Heart Rate, Blood Oxygen, Sleep Tracking, Activity Tracking, Breathing\nBattery Capacity: 300\nConnectivity Technology: USB\nWireless Communication: Bluetooth')">
+View Details
+</button>		
+</div>
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Laptop">
+<h3>Laptop</h3>
+<p>₹49,999</p>
+<button onclick="addToCart('Laptop',49999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Laptop',49999,'Brand: Dell\nModel: Inspiron 15 3530 Laptop\nScreen Size: 15.6 Inches\nColour: Carbon Black\nStorage: 512 GB\nCPU: Core i3\nRAM: 8 GB\nOS: Windows 11 Home\nFeatures: Anti Glare, Memory Card Slot, Numeric Keypad\nGraphics: Integrated')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTK2Qzbg-w-40rI14Q3X0cjSN2HUFIK1pM11nOtpEp3RssDM9Q9X6mlNvy05WDvmZ2AvWN7mLnQT1_ZoZewgO5fdnP03bR_LK_BntTyvoqV-E0ewcrPl1CGTg" alt="Shoes">
+<h3>Running Shoe</h3>
+<p>₹1,999</p>
+<button onclick="addToCartWithSize('Running Shoe',1999,'size1')">
+Add to Cart
+</button>
+<button onclick="showProduct('Running Shoe',1999,'Material: Polyvinyl Chloride\nClosure: Lace-Up\nHeel Type: No Heel\nWater Resistance: Not Water Resistant\nSole: Polyvinyl Chloride\nStyle: Walking\nCountry of Origin: India')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size1">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="product-card">
+<img src="D:\images\headphone.webp" alt="Headphones">
+<h3>Head Phone</h3>
+<p>₹1,499</p>
+<button onclick="addToCart('HeadPhone',1499)">
+Add to Cart
+</button>
+<button onclick="showProduct('HeadPhone',1499,'Brand: boAt\nColour: Black\nEar Placement: Over Ear\nForm Factor: Over Ear\nHeadphone Jack: USB')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\61d478MlxHL._SX522_.jpg" alt="Camera">
+<h3>Camera</h3>
+<p>₹29,999</p>
+<button onclick="addToCart('Camera',29999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Camera',29999,'Compatible Mountings: Kodak Fz45\nAspect Ratio: 1.50:1, 16:9, 4:3\nSensor: CMOS\nFile Format: RAW\nImage Stabilisation: Digital\nMax Focal Length: 19.6 mm\nOptical Zoom: 4x\nMax Aperture: f/3\nISO Min: 100\nMetering: Center Weighted')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\Peter England Men's Regular Fit Two Piece Suit.webp" alt="Peter England Men Regular Fit Two Piece Suit">
+<h3>Peter England Men's Regular Fit Two Piece Suit</h3>
+<p>₹10,000</p>
+<button onclick="addToCartWithSize('Peter England Mens Regular Fit Two Piece Suit',10000,'size2')">
+Add to Cart
+</button>
+<button onclick="showProduct('Peter England Mens Regular Fit Two Piece Suit',10000,'Material: 65% Polyester, 35% Viscose\nStyle: Regular\nPattern: Solid\nCare: Dry Clean Only\nCountry of Origin: India')">
+View Details
+</button>
+<!-- SIZE SELECT -->
+<select id="size2">
+<option value="">Select Size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+</div>
+<div class="product-card">
+<img src="D:\images\318pegi8WRL.jpg" alt="Wireless Bluetooth Neckband Earphone">
+<h3>Wireless Bluetooth Neckband Earphone</h3>
+<p>₹900</p>
+<button onclick="addToCart('Wireless Bluetooth Neckband Earphone',900)">
+Add to Cart
+</button>
+<button onclick="showProduct('Wireless Bluetooth Neckband Earphone',999,'Brand: Lynacz Original\nColour: Black\nEar Placement: In Ear\nForm Factor: In Ear\nImpedance: 32 Ohms')">
+View Details
+</button>
+</div>			
+</section>
+<!-- Footer -->
+<footer>
+<p>© 2026 ShopKart. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+<script>
+function addToCart(name, price) {
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let product = {
+name: name,
+price: price
+};
+cart.push(product);
+localStorage.setItem("cart", JSON.stringify(cart));
+alert(name + " added to cart!");
+}
+</script>
+<script src="script.js"></script>
+<script>
+let links = document.querySelectorAll("nav a");
+let currentPage = window.location.pathname.split("/").pop();
+if(currentPage === ""){
+currentPage = "index.html";
+}
+links.forEach(link => {
+let linkPage = link.getAttribute("href");
+if(linkPage === currentPage){
+link.classList.add("active");
+}
+});
+</script>
+<div id="productModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+<div style="background:white; padding:20px; margin:100px auto; width:300px; border-radius:10px;">
+<span onclick="closeModal()" style="float:right; cursor:pointer;">X</span>
+<h2 id="pName"></h2>
+<p id="pPrice"></p>
+<p id="pDesc"></p>
+</div>
+</div>
+<script>
+function showProduct(name, price, desc) {
+document.getElementById("pName").innerText = name;
+document.getElementById("pPrice").innerText = "Price: ₹" + price;
+document.getElementById("pDesc").innerText = desc;
+document.getElementById("productModal").style.display = "block";
+}
+function closeModal() {
+document.getElementById("productModal").style.display = "none";
+}
+</script>
+</div>
+</body>
+</html>

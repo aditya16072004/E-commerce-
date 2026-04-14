@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart - ShopKart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h2>Your Cart</h2>
+</header>
+<div class="logo">
+<a href="index.html">ShopKart</a>
+</div>
+<div class="cart-container">
+<table id="cartTable">
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Remove</th>
+</tr>
+</table>
+<h3 id="totalAmount">Total: ₹0</h3>
+<a href="payment.html">
+<button class="checkout-btn">Proceed to Payment</button>
+</a>
+</div>
+<script src="script.js"></script>
+<script>
+displayCart();
+</script>
+<div id="cartItems"></div>
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cartContainer = document.getElementById("cartItems");
+if(cart.length === 0){
+cartContainer.innerHTML = "<h3>Your Cart Is Empty</h3>";
+} 
+else {
+cart.forEach(item => {
+cartContainer.innerHTML += `
+<p>${item.name} - ₹${item.price}</p>
+`;
+});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ShopKart - E-Commerce Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="logo">
+<a href="index.html">ShopKart</a>
+</div>
+<div class="search-box">
+<input type="text" placeholder="Search for products...">
+<button>Search</button>
+</div>
+<div class="menu">
+<a href="login.html">Login</a>
+<a href="Signup.html">Signup</a>
+<a href="cart.html">Cart</a>
+<a href="admin.html">Admin</a>
+<a href="payment.html">Payment</a>
+</div>
+</div>
+</header>
+<!-- Navigation -->
+<nav>
+<a href="electronics.html">Electronics</a>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da" alt="Shopping Banner">
+</section>
+<!-- Products Section -->
+<section class="products">
+<div class="product-card">
+<img src="D:\images\TV.webp" alt="TV"
+<h3>Xiaomi 138 cm (55 inch) TV</h3>
+<p>₹29,999</p>
+<button onclick="addToCart('Xiaomi 138 cm (55 inch) TV',29999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Xiaomi 138 cm (55 inch) TV',29999,'Screen Size: 55 Inches\nBrand: Xiaomi\nDisplay: LED\nResolution: 4K\nRefresh Rate: 60 Hz\nFeatures: Bezel-Less, Built-in Speaker, Chromecast, Eye Comfort Mode\nConnectivity: Ethernet, HDMI, USB, Wi-Fi\nAspect Ratio: 16:9\nDimensions: 7.6D x 122.6W x 71.7H cm')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Laptop">
+<h3>Macbook</h3>
+<p>₹50,000</p>
+<button onclick="addToCart('Laptop',50000)">
+Add to Cart
+</button>
+<button onclick="showProduct('MacBook',50000,'Brand: Apple\nModel: MacBook Neo\nScreen Size: 13 Inches\nColour: Blue\nCPU: Apple A18 Pro\nRAM: 8 GB\nOperating System: macOS\nGraphics: Integrated\nCPU Speed: 1 GHz\nStorage: SSD')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\headphone.jpg" alt="Headphone">
+<h3>Headphone</h3>
+<p>₹2,599</p>
+<button onclick="addToCart('Headphone',2599)">
+Add to Cart
+</button>
+<button onclick="showProduct('Headphone',2599,'Brand: boAt\nColour: Starry Night\nEar Placement: Over Ear\nForm Factor: Over Ear\nImpedance: 32 Ohms')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\tab a11.jpg" alt="Samsung Galaxy Tab A11+">
+<h3>Samsung Galaxy Tab A11+</h3>
+<p>₹30,000</p>
+<button onclick="addToCart('Samsung Galaxy Tab A11+',30000)">
+Add to Cart
+</button>
+<button onclick="showProduct('Samsung Galaxy Tab A11+',30000,'Brand: Samsung\nModel: Galaxy Tab A11+\nStorage: 128 GB\nScreen Size: 11 Inches\nResolution: 1920 x 1200 Pixels')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\watch.webp" alt="Watch">
+<h3>Watch</h3>
+<p>₹1,499</p>
+<button onclick="addToCart('Watch',1499)">
+Add to Cart
+</button>
+<button onclick="showProduct('Watch',1499,'Operating System: Smartwatch OS\nFeatures: Activity Tracker, Calorie Tracker, Heart Rate Monitor, Notifications, SpO2\nBattery: 210 mAh\nConnectivity: Bluetooth\nWireless Standard: Bluetooth')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\pendrive.webp" alt="Flash Drive">
+<h3>Flash Drive</h3>
+<p>₹999</p>
+<button onclick="addToCart('Flash Drive',999)">
+Add to Cart
+</button>
+<button onclick="showProduct('Flash Drive',999,'Brand: EVM\nStorage: 64 GB\nInterface: USB 3.0\nFeatures: Compact, Lightweight, Plug-and-Play, Dual USB Type-C & Type-A, USB 3.2 Gen 1\nSpeed: Up to 120MB/s Read, 50MB/s Write')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\mouse.webp" alt="HP M190 Wireless Mouse">
+<h3>HP M190 Wireless Mouse</h3>
+<p>₹485</p>
+<button onclick="addToCart('HP M190 Wireless Mouse',485)">
+Add to Cart
+</button>
+<button onclick="showProduct('HP M190 Wireless Mouse',485,'Brand: HP\nColour: Black\nConnectivity: USB\nFeatures: Programmable Buttons, Multi-Surface Sensor, Wireless Connectivity\nMovement Detection: Optical')">
+View Details
+</button>
+</div>
+<div class="product-card">
+<img src="D:\images\keyboard.jpg" alt="HP K160 Wireless Keyboard">
+<h3>HP K160 Wireless Keyboard</h3>
+<p>₹729</p>
+<button onclick="addToCart('HP K160 Wireless Keyboard',729)">
+Add to Cart
+</button>
+<button onclick="showProduct('HP K160 Wireless Keyboard',729,'Brand: HP\nCompatible Devices: Laptop\nConnectivity: Wireless\nType: Wireless Keyboard\nRecommended Use: Office')">
+View Details
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<p>© 2026 ShopKart. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+<script>
+let links = document.querySelectorAll("nav a");
+let currentPage = window.location.pathname.split("/").pop();
+if(currentPage === ""){
+currentPage = "electronics.html";
+}
+links.forEach(link => {
+let linkPage = link.getAttribute("href");
+if(linkPage === currentPage){
+link.classList.add("active");
+}
+});
+</script>
+<div id="productModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+<div style="background:white; padding:20px; margin:100px auto; width:300px; border-radius:10px;">
+<span onclick="closeModal()" style="float:right; cursor:pointer;">X</span>
+<h2 id="pName"></h2>
+<p id="pPrice"></p>
+<p id="pDesc"></p>
+</div>
+</div>
+<script>
+function showProduct(name, price, desc) {
+document.getElementById("pName").innerText = name;
+document.getElementById("pPrice").innerText = "Price: ₹" + price;
+document.getElementById("pDesc").innerText = desc;
+document.getElementById("productModal").style.display = "block";
+}
+function closeModal() {
+document.getElementById("productModal").style.display = "none";
+}
+</script>
+</div>
+</body>
+</html>
